@@ -1,26 +1,24 @@
 ﻿using System;
-
 class Program
 {
     static void Main()
     {
-        Console.Write("How many motors are carrying the packages? ");
-        int motors = int.Parse(Console.ReadLine());
-        
-        Console.Write("How many kg of packages do we expect? ");
-        double weight = double.Parse(Console.ReadLine());
-        
-        double maxLoadPerMotor = 5.6;
-        
-        double loadPerMotor = weight / motors;
-        
-        if (loadPerMotor <= maxLoadPerMotor)
+        Console.Write("Hvor mange motorer bærer pakkerne? ");
+        int antalmotorer = int.Parse(Console.ReadLine());
+
+        Console.Write("Hvor mange kilo pakker forventer vi? ");
+        double samletVægt = double.Parse(Console.ReadLine());
+
+        double maksBelastning = 5.6;
+        double belastningPrMotor = samletVægt / antalmotorer;
+
+        if (belastningPrMotor <= maksBelastning)
         {
-            Console.WriteLine("Yes! The conveyor belt can carry the packages.");
+            Console.WriteLine("Ja! Transportbåndet kan bære pakkerne.");
         }
         else
         {
-            Console.WriteLine("No. The conveyor belt cannot carry the packages.");
+            Console.WriteLine("Nej. Transportbåndet kan ikke bære pakkerne.");
         }
     }
 }
